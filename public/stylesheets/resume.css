@@ -1,0 +1,131 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.cv-box {
+    margin: 3%;
+}
+
+.header h1 {
+    margin: 20px 0;
+    width: 300px;
+    background-image: url("https://media.istockphoto.com/id/1411682102/photo/3d-abstract-colorful-background-suitable-for-magazine-covers-banners-and-brochures-3d-render.webp?b=1&s=170667a&w=0&k=20&c=uIf4qSqwxGV8aObX-1fWAx7FEQ0bs7MNUYxWPmFIwK8=");
+    background-size: cover;
+    background-position: center;
+
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    background-color: red;
+}
+
+.address {
+    margin: 20px 0;
+}
+
+.address i {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.address h3 {
+    margin: 5px 0;
+}
+
+.link a {
+    text-decoration: none;
+    color: blue;
+    margin: 30px 20px 20px 0px;
+    /* background-color: brown; */
+}
+
+.profile-heading {
+    margin: 20px 0;
+}
+
+.profile-heading p {
+    margin: 10px 0;
+}
+
+.skills {
+    margin: 10px 0;
+}
+
+.skills span {
+    color: #625b5b;
+}
+
+.skills h4 {
+    margin: 5px 0;
+}
+
+.project-box {
+    margin: 20px 0;
+}
+
+.project {
+    display: flex;
+    flex-wrap: wrap;
+    /* flex-direction: column; */
+    gap: 30px;
+    /* justify-content: center; */
+}
+
+.project a {
+    text-decoration: none;
+    color: blue;
+    margin: 10px 0;
+}
+
+.p1,
+.p2,
+.p3 {
+    width: 300px;
+    height: 150px;
+    margin: 10px 0;
+    /* background-color: red; */
+}
+
+.experiance-box {
+    margin: 20px 0;
+}
+
+.experiance {
+    margin: 20px 0;
+    border: 2px solid #dadada;
+    border-radius: 20px;
+    padding: 20px 5px;
+}
+
+.experiance a {
+    text-decoration: none;
+    color: blue;
+}
+
+.educations h4 {
+    margin: 20px 0;
+}
+
+.educations span {
+    color: blue;
+}
+
+
+
+
+
+
+
+.footer {
+    margin: 20px 0;
+    display: flex;
+    justify-content: space-between;
+}

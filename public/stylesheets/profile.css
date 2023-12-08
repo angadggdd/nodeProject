@@ -1,0 +1,458 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.header {
+
+    padding: 0 4.8rem;
+    height: 8rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+}
+
+.header img {
+    height: 3rem;
+}
+
+.logo {
+    position: relative;
+    font-size: 4rem;
+    color: #141111;
+    text-decoration: none;
+    font-weight: 600;
+    cursor: pointer;
+    opacity: 999;
+    background-image: url("https://media.istockphoto.com/id/1411682102/photo/3d-abstract-colorful-background-suitable-for-magazine-covers-banners-and-brochures-3d-render.webp?b=1&s=170667a&w=0&k=20&c=uIf4qSqwxGV8aObX-1fWAx7FEQ0bs7MNUYxWPmFIwK8=");
+    background-size: cover;
+    background-position: center;
+
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    /* animation: slideRight 1s ease forwards; */
+
+}
+
+
+/* Basic button styles */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 2.5rem;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border: 2px solid #3498db;
+    border-radius: 5px;
+    color: #3498db;
+    background-color: #ffffff;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-logout {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 2.5rem;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border: 2px solid #3498db;
+    border-radius: 5px;
+    color: #fff;
+    background-color: #05090c;
+}
+
+/* Hover effect */
+.btn:hover {
+    background-color: #3498db;
+    color: #ffffff;
+}
+
+
+.navbar-list {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+
+.navbar-link:link,
+.navbar-link:visited {
+    display: inline-block;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: black;
+    transition: all .5s;
+
+}
+
+.navbar-link:hover,
+.navbar-link:active {
+    color: #3498db;
+}
+
+.mobile-navbar-btn {
+    display: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+.mobile {
+    width: 7rem;
+    height: 4rem;
+}
+
+.dmobile {
+    width: 7rem;
+    height: 4rem;
+}
+
+.mobile[name="close-outline"] {
+    display: none;
+}
+
+.dmobile[name="close-outline"] {
+    display: none;
+}
+
+.desktop-navbar-btn {
+    text-align: center;
+    display: block;
+    z-index: 999;
+    display: flex;
+}
+
+.sideBar {
+    /* display: none; */
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(232, 79, 211);
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: translateY(-100%);
+    transition: all 0.5s linear;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 3rem;
+
+}
+
+.sideMenu .sideBar {
+    transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.sideMenu .desktop-navbar-btn .dmobile[name="close-outline"] {
+    display: block;
+}
+
+.sideMenu .desktop-navbar-btn .dmobile[name="menu-outline"] {
+    display: none;
+}
+
+.btn-email {
+    display: inline-block;
+    padding: 10px 20px;
+    width: 35%;
+    font-size: 2.5rem;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    /* border: 2px solid #3498db; */
+    border-radius: 5px;
+    color: #3498db;
+    background-color: #ffffff;
+    /* transition: background-color 0.3s, color 0.3s; */
+}
+
+.btn-email:hover {
+    background-color: #141111;
+    color: #ffffff;
+}
+
+.sideBar img {
+    height: 35vh;
+    width: 35%;
+    border-radius: 5%;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+/* lsidebar   animation */
+.lsidebar {
+    display: none;
+}
+
+.lmobile-navbar-btn {
+    display: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+.lmobile {
+    width: 7rem;
+    height: 4rem;
+}
+
+.lmobile[name="chevron-back-outline"] {
+    display: none;
+}
+
+/* lsidebar   animation */
+
+
+/* 980px */
+@media (max-width: 62em) {
+
+    .sideBar {
+        display: none;
+    }
+
+    .btn {
+        display: none;
+    }
+
+    .mobile-navbar-btn {
+        display: block;
+        /* z-index: 991; */
+    }
+
+    .desktop-navbar-btn {
+        display: none;
+    }
+
+    .header {
+        position: relative;
+    }
+
+
+    .navbar {
+        width: 100%;
+        height: 100vh;
+        background-color: rgb(232, 79, 211);
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform: translateX(100%);
+        transition: all 0.5s linear;
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+    }
+
+    .navbar-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .active .navbar {
+        transform: translateX(0);
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+    }
+
+    .active .mobile-navbar-btn .mobile[name="close-outline"] {
+        display: block;
+    }
+
+    .active .mobile-navbar-btn .mobile[name="menu-outline"] {
+        display: none;
+    }
+
+    .active .mobile-navbar-btn .btn[name="btn-login"] {
+        display: none;
+    }
+
+    /* lsidebar   animation */
+    .lmobile-navbar-btn {
+        display: block;
+        z-index: 999;
+    }
+
+    .lsidebar {
+        display: block;
+        z-index: 1;
+    }
+
+
+
+    .lsidebar {
+        width: 100%;
+        height: 100vh;
+        background-color: blue;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform: translateX(-100%);
+        transition: all 0.5s linear;
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+    }
+
+    .lsideMenu .lsidebar {
+        transform: translateX(0);
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+    }
+
+    .lsideMenu .lmobile-navbar-btn .lmobile[name="chevron-back-outline"] {
+        display: block;
+    }
+
+    .lsideMenu .lmobile-navbar-btn .lmobile[name="chevron-forward-outline"] {
+        display: none;
+    }
+
+
+    /* lsidebar   animation */
+
+
+
+}
+
+/* section 1 styling */
+
+.section-hero
+ {
+    padding: 5rem;
+    background-color: rgb(212, 224, 224);
+    height: 100vh auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /* align-items: center; */
+}
+.pic img{
+    width: 400px;
+    height:  500px;
+    border-radius: 5px;
+}
+
+.section-services {
+    background-color: #381b1b;
+}
+.home-contect h3 {
+    margin: 10px 0;
+    font-size: large;
+}
+.home-contect p{
+    margin: 30px 0;
+    font-size: 12px;
+}
+.btn-boxt{
+    margin: 10px 0;
+}
+.btnS{
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px 10px 10px 0;
+    width: 100px;
+    height: 30px;
+    font-size: 1rem;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    /* border: 2px solid #3498db; */
+    border-radius: 5px;
+    color: #3498db;
+    background-color: #ffffff;
+}
+.btnS:hover{
+    background: #000;
+}
+.btn-box{
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 20px 40px 40px 0;
+    width: 150px;
+    height: 30px;
+    font-size: 1rem;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    /* border: 2px solid #3498db; */
+    border-radius: 5px;
+    color: #3498db;
+    background-color: #ffffff; 
+}
+.btn-box:hover{
+    background-color: #000;
+}
+.home-scl a{
+margin: 80px 30px 0 0;
+font-size: x-large;
+}
+
+/* section 1 styling */
+
+
+
+/* style footer section */
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 2rem 5%;
+    background: #000;
+    /* margin-top: 10px; */
+    /* text-decoration-line: underline; */
+}
+
+.last-text p {
+    font-size: 1rem;
+    color: #fff;
+    font-weight: 700;
+}
+
+.top {
+    position: fixed;
+    bottom: 2.1rem;
+    right: 2.1rem;
+}
+
+.top i {
+    color: #fff;
+    background: #3498db;
+    font-size: 20px;
+    padding: 5px;
+    border-radius: 0.5rem;
+
+}
+
+/* style footer section */
